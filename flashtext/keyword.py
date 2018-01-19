@@ -311,7 +311,7 @@ class KeywordProcessor(object):
         """
         if not os.path.isfile(keyword_file):
             raise IOError("Invalid file path {}".format(keyword_file))
-        with open(keyword_file)as f:
+        with open(keyword_file,encoding='utf-8')as f:
             for line in f:
                 if '=>' in line:
                     keyword, clean_name = line.split('=>')
